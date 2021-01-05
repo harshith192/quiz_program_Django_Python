@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+	<title>Quiz Application</title>
+	<link rel="stylesheet" type="text/css" href = "{% static 'css/style.css' %}">
+
+</head>
+<body>
+	<div class = "home-box custom-box  ">
+		<h3>Instruction:</h3>
+		<p>Total number of questions: <span class="total-question"> 10</span></p>
+		<button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+    </div> <!-- home-box -->
+    
+    <div class = "quiz-box custom-box hide">
+        <div class="question-number">
+            
+        </div>
+
+        <div class="question-text">
+           
+        </div>
+
+        <div class="option-container">
+              
+        </div>
+
+        <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Next</button>
+        </div>
+
+        <div class="answer-indicator">
+      
+
+        </div>
+
+    </div>  <!-- quiz-box-->
+
+    <div class="result-box custom-box hide"> 
+        <h1>Quiz Result</h1>
+        <table>
+            <tr>
+                <td>Total Questions</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>Attempt</td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-Correct"></span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-Wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="total-Percentage"></span></td>
+            </tr>
+            <tr>
+                <td>Your Toatl Score</td>
+                <td><span class="total-Score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+        <button type="button" class="btn" onclick="goToHome()">Go to Home</button>
+        
+    </div>
+
+    <script src= "{% static 'js/app.js' %}" ></script>
+    <script src= "{% static 'js/question.js' %}" ></script>
+    
+    
+</body>
+</html>
